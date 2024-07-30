@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+ -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="links.css">
+    <link rel="stylesheet" href="sheets.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="main">
+            <div class="sidebar">
+                <div onclick=hideAllSheets() class="blur-bg">
+                    <div class="sidebar-panel">
+                        <img class="img-close-button" onclick=hideAllSheets() src="images/web/icon-close-button.svg"
+                            alt="msharp m# msharp.cz m#.cz IT development design csharp c# ios .net windows apple web">
+                        <ul>
+                            <!--      <li><a onclick=hideAllSheets()><img src="images/web/icon-close-button.svg"
+                                        alt="msharp m# msharp.cz m#.cz IT development design csharp c# ios .net windows apple web"></a>
+                            </li> -->
+                            <li><a onclick=btnClickHomeInSidebar()>Home</a></li>
+                            <li><a onclick=btnClickProjects()>Projects</a></li>
+                            <li><a onclick=btnClickAbout()>About</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <nav>
+                <a onclick=btnClickHome()>
+                    <img class="msharp-logo" src="images/web/msharp-logo-300x120.png"
+                        alt="msharp m# IT development design csharp c# ios .net windows apple web">
+                </a>
+                <ul>
+                    <li class="hide-on-mobile"><a onclick=btnClickHome()>Home</a></li>
+                    <li class="hide-on-mobile"><a onclick=btnClickProjects()>Projects</a></li>
+                    <li class="hide-on-mobile"><a onclick=btnClickAbout()>About</a></li>
+                    <li class="menu-button" onclick=showSidebar()>
+                        <img src="images/web/icon-burger.svg">
+                    </li>
+                </ul>
+            </nav>
+
+
+            <div class="main-content">
+                <div class="container content-home">
+                    <p>&nbsp;</p>
+
+                    <div class="project-item">
+                        <p class="item-link">Use M# for everything.</p>
+                        <p class="item-description">&nbsp;</p>
+                    </div>
+                </div>
+                <div class="container content-projects">
+                    <p>Projects</p>
+
+                    <div class="project-item">
+                        <a onclick="showSheet('webcccadtools')" class="item-link">CCcadTools</a>
+                        <div class="item-description">
+                            <img src="images/web/icon-web.svg">
+                            <p>Web page</p>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <a onclick="showSheet('cccadtools')" class="item-link">CCcadTools</a>
+                        <div class="item-description">
+                            <img src="images/web/icon-windows.svg">
+                            <p>Add-on for Autodesk AutoCAD base products</p>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <a onclick="showSheet('webccsupport')" class="item-link">CCsupport</a>
+                        <div class="item-description">
+                            <img src="images/web/icon-web.svg">
+                            <p>Web page</p>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <a onclick="showSheet('sgciviltools')" class="item-link">SG Civil Tools</a>
+                        <div class="item-description">
+                            <img src="images/web/icon-windows.svg">
+                            <p>Add-on for Autodesk Civil 3D</p>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <a onclick="showSheet('sgdatavalid')" class="item-link">SG Data Validators</a>
+                        <div class="item-description">
+                            <img src="images/web/icon-windows.svg">
+                            <p>Add-on for Autodesk Civil 3D</p>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <a onclick="showSheet('sgbimcomplete')" class="item-link">SG Civil BIM Complete</a>
+                        <div class="item-description">
+                            <img src="images/web/icon-windows.svg">
+                            <p>Add-on for Autodesk Civil 3D</p>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <a onclick="showSheet('skoda')" class="item-link">MyŠkoda Essentials</a>
+                        <div class="item-description">
+                            <img src="images/web/icon-apple.svg">
+                            <p>iOS app</p>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <a onclick="showSheet('cis')" class="item-link">Calendar Information Service</a>
+                        <div class="item-description">
+                            <img src="images/web/icon-apple.svg">
+                            <p>iOS app</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container content-about">
+                    <p>About</p>
+
+                    <div class="project-item">
+                        <a onclick="showSheet('michal')" class="item-link">Michal Heczko</a>
+                        <div class="item-description">
+                            <img src="images/web/icon-code.svg">
+                            <p>Programmer</p>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <a onclick="showSheet('skills')" class="item-link">Skills</a>
+                        <p class="item-description">&nbsp;</p>
+                    </div>
+                    <div class="project-item">
+                        <a onclick="showSheet('experience')" class="item-link">Experience</a>
+                        <p class="item-description">&nbsp;</p>
+                    </div>
+                    <div class="project-item">
+                        <a onclick="showSheet('education')" class="item-link">Education</a>
+                        <p class="item-description">&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <footer>
+            <!--  <h3 class="msharp-mark prevent-select">M#M#M#M#M#M#M#M#M#M#M#M#M#M#M#M#M#M#</h3> -->
+            <p>Inspired by <a target="_blank" href="https://en.wikipedia.org/wiki/Think_Small">Think small.</a></p>
+            <p class="note">Copyright Ⓒ 2024. All Rights Reserved.</p>
+            <a href="mailto:info@msharp.cz">
+                <img src="images/web/icon-email.svg">
+            </a>
+        </footer>
+    </div>
+
+    <div class="sheet">
+        <div onclick=hideAllSheets() class="blur-bg">
+            <div class="sheet-content">
+                <img class="img-close-button" onclick=hideAllSheets() src="images/web/icon-close-button.svg"
+                    alt="msharp m# msharp.cz m#.cz IT development design csharp c# ios .net windows apple web">
+                <div id="sheet-content-insert"></div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

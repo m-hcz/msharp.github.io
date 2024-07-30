@@ -1,0 +1,108 @@
+
+.sheet {
+    position: absolute;
+    /*     margin-top: var(--default-spacing);
+        padding-bottom: calc(var(--default-spacing)*5); */
+    top: 0;
+    left: 100%;
+    /* bottom: 0; */
+  /*    bottom: auto; */
+    z-index: 888;
+    /*   background-color: var(--color-black); */
+    /* backdrop-filter: blur(2px);
+       background: var(--color-text-60); */
+    /* flex-direction: column; */
+    width: 100%;
+    min-height: 100%;
+    /*     
+        height: 100hv; */
+    transition: left ease-in-out var(--def-transition-duration);
+}
+
+.sheet-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    /* align-items: center; */
+    justify-content: start;
+    flex-wrap: nowrap;
+    gap: calc(var(--default-spacing)*3);
+    width: 100%;
+    max-width: 500px;
+    margin: calc(var(--default-spacing)*2);
+    background: var(--color-bg-sheet);
+    padding: calc(var(--default-spacing)*2);
+    box-shadow: 0 0 50px var(--color-text-80);
+}
+
+#sheet-content-insert {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: calc(var(--default-spacing)*3);
+    overflow-y: auto;
+}
+
+#sheet-content-insert img {
+    align-self: center;
+    filter: grayscale(80%);
+}
+
+#sheet-content-insert .icon {
+   max-width: 60%;
+}
+
+#sheet-content-insert .image {
+   max-width: 40%;
+}
+
+.img-collection {
+    align-self: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+#sheet-content-insert a {
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    gap: var(--default-spacing);
+}
+
+.sheet-description {
+}
+
+#sheet-content-insert h2 {
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
+    font-weight: bold;
+    align-self: center;
+}
+
+#sheet-content-insert h3 {
+    font-size: clamp(1rem, 5vw, 1.1rem);
+    font-weight: bold;
+}
+
+#sheet-content-insert h4 {
+    display: flex;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: calc(var(--default-spacing)*0.5) 0;
+}
+
+.sheet-part {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sheet-part-stretch {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}

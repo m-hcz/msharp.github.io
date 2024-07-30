@@ -1,0 +1,202 @@
+:root {
+    --def-transition-duration: .5s;
+    --def-link-duration: .3s;
+    --def-transition-delay: .2s;
+
+    --color-bg: #CED1CE;
+    --color-bg-sheet: #E9E8E8;
+    
+    --color-text: #636363;
+    --color-text-80: #63636380;
+    --color-text-60: #63636360;
+    --color-text-40: #63636340;
+    --color-text-10: #63636310;
+
+    --default-spacing: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background: var(--color-bg);
+    color: var(--color-text);
+    display: grid;
+ /*    flex-grow: 1; */
+/*     
+    flex-direction: column;
+    flex-wrap: wrap; */
+    overflow-x: hidden;
+}
+
+.msharp-logo {
+    position: absolute;
+    top: var(--default-spacing);
+    left: -3px;
+    width: 140px;
+    transform: rotate(-45deg);
+}
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+    background-color: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-text-60);
+}
+
+.page {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    align-items: start;
+    flex: 1;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    /*     align-content: stretch;
+    justify-content: flex-start; */
+    /*     justify-content: space-between; */
+    /* flex-wrap: wrap; */
+    gap: calc(var(--default-spacing)*3);
+    /*  padding: var(--default-spacing); */
+    max-width: 1440px;
+    width: 100%;
+    /*  min-height: 100vh; */
+}
+
+.main-content {
+    position: relative;
+    margin: calc(var(--default-spacing)*5) 0;
+    /*     display: flex;
+    padding: 0 calc(var(--default-spacing)*2);
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: calc(var(--default-spacing)*3);
+    background: orange; */
+}
+
+.container {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    display: flex;
+    padding: 0 calc(var(--default-spacing)*2);
+    padding-top: calc(var(--default-spacing)*5);
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: calc(var(--default-spacing)*3);
+    width: 100%;
+}
+
+.content-home {
+    display: flex;
+}
+
+.content-projects {
+    display: none;
+}
+
+.content-about {
+    display: none;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.item-description {
+    font-size: 12px;
+    display: flex;
+    gap: var(--default-spacing);
+}
+
+.blur-bg {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    backdrop-filter: blur(2px);
+    background: var(--color-text-60);
+}
+
+
+.note {
+    font-size: 12px;
+}
+
+footer {
+    /* background-color: var(--color-gray2); */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--default-spacing);
+    padding: calc(var(--default-spacing)*2);
+    /*  margin-top: auto; */
+    /*     margin-bottom: var(--default-spacing); */
+    background-image: url("images/web/msharp-logo-transparent10.png");
+    background-repeat: repeat;
+    background-size: 200px;
+    width: 100%;
+    max-width: 1440px;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+}
+
+.prevent-select {
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+
+/* @media (min-width: 769px) {
+    .sheet-content {
+width: 50%;
+     }
+} */
+@media (max-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*     .sheet-content {
+        width: 100%;
+             } */
+}
