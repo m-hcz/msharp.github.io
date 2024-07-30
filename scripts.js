@@ -310,7 +310,11 @@ let htmlmichal = `
                     <h2>Michal Heczko</h2>
                    
                     <div class="sheet-part">
-                        <p class="sheet-description">Self-employed programmer.</p>
+                        <p class="sheet-description">I’m a dedicated and methodical software development professional with a proven track record in delivering high-quality applications. As a self-employed developer, I manage every aspect of the application lifecycle, from contract negotiation to development and bug fixes. I thrive in collaborative environments and continually seek opportunities to enhance my skills. I embrace new challenges with dynamic thinking and determination.</p>
+                    </div>
+                    <div class="sheet-part">
+                        <h3>E-mail:</h3>
+                        <a href="mailto:info@msharp.cz" class="sheet-description">info@msharp.cz</a>
                     </div>
 `;
 let htmlskills = `
