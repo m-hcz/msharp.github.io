@@ -12,18 +12,19 @@ Array.from(sheetContents).forEach(element => {
 });
 
 function showSidebar() {
-    adjustSheetHeight()
+    adjustHeight()
     sidebar.style.left = 0
 }
 
 function hideSidebar() {
+    resetHeight()
     sidebar.style.left = "100%"
 }
 
 function hideAllSheets() {
     hideSidebar()
     hideSheet()
-    adjustSheetHeight()
+    adjustHeight()
 }
 
 function btnClickHomeInSidebar() {
@@ -31,40 +32,41 @@ function btnClickHomeInSidebar() {
     hideAbout()
     hideProjects()
     showHome()
-    adjustSheetHeight()
+    adjustHeight()
 }
 function btnClickProjectsInSidebar() {
     hideSidebar()
     hideHome()
     hideAbout()
     showProjects()
-    adjustSheetHeight()
+    adjustHeight()
 }
 function btnClickAboutInSidebar() {
     hideSidebar()
     hideHome()
     hideProjects()
     showAbout()
-    adjustSheetHeight()
+    adjustHeight()
 }
 
 function btnClickHome() {
+    resetHeight()
     hideAbout()
     hideProjects()
     showHome()
-    adjustSheetHeight()
+    adjustHeight()
 }
 function btnClickProjects() {
     hideHome()
     hideAbout()
     showProjects()
-    adjustSheetHeight()
+    adjustHeight()
 }
 function btnClickAbout() {
     hideHome()
     hideProjects()
     showAbout()
-    adjustSheetHeight()
+    adjustHeight()
 }
 
 function showHome() {
@@ -91,14 +93,20 @@ function hideAbout() {
 const sheet = document.querySelector(".sheet")
 const sheetContentInsert = document.querySelector("#sheet-content-insert")
 
-function adjustSheetHeight() {
+
+function resetHeight() {
+    sheet.style.height = "auto";
+    sidebar.style.height = "auto";
+}
+
+function adjustHeight() {
     sheet.style.height = document.body.scrollHeight + 'px';
     sidebar.style.height = document.body.scrollHeight + 'px';
 }
 
 // Adjust the div height initially and on window resize
-window.addEventListener('load', adjustSheetHeight);
-window.addEventListener('resize', adjustSheetHeight);
+window.addEventListener('load', adjustHeight);
+window.addEventListener('resize', adjustHeight);
 
 function showSheet(item) {
 
@@ -130,6 +138,7 @@ function showSheet(item) {
     sheet.style.left = 0
 }
 function hideSheet() {
+    resetHeight()
     sheet.style.left = "100%"
 }
 
