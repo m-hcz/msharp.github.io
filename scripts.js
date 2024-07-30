@@ -12,6 +12,7 @@ Array.from(sheetContents).forEach(element => {
 });
 
 function showSidebar() {
+    adjustSheetHeight()
     sidebar.style.left = 0
 }
 
@@ -22,6 +23,7 @@ function hideSidebar() {
 function hideAllSheets() {
     hideSidebar()
     hideSheet()
+    adjustSheetHeight()
 }
 
 function btnClickHomeInSidebar() {
