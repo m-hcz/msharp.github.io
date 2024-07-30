@@ -19,24 +19,28 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    
 }
 
 html {
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+    max-width: 100%;
 }
 
 body {
+    position: relative;
     min-height: 100vh;
+    min-height: 100dvh;
     width: 100%;
+    max-width: 100%;
     background: var(--color-bg);
     color: var(--color-text);
-    display: grid;
- /*    flex-grow: 1; */
-/*     
+    display: flex;
     flex-direction: column;
-    flex-wrap: wrap; */
+    align-items: center;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .msharp-logo {
@@ -64,41 +68,22 @@ body {
     justify-content: center;
     align-items: start;
     flex: 1;
-    grid-column: 1;
-    grid-row: 1;
+    max-width: 1440px;
 }
 
 .main {
     display: flex;
     flex-direction: column;
-    /*     align-content: stretch;
-    justify-content: flex-start; */
-    /*     justify-content: space-between; */
-    /* flex-wrap: wrap; */
     gap: calc(var(--default-spacing)*3);
-    /*  padding: var(--default-spacing); */
-    max-width: 1440px;
     width: 100%;
-    /*  min-height: 100vh; */
 }
 
 .main-content {
     position: relative;
     margin: calc(var(--default-spacing)*5) 0;
-    /*     display: flex;
-    padding: 0 calc(var(--default-spacing)*2);
-    flex-direction: column;
-    align-content: stretch;
-    justify-content: start;
-    flex-wrap: wrap;
-    gap: calc(var(--default-spacing)*3);
-    background: orange; */
 }
 
 .container {
-    /* position: absolute;
-    top: 0;
-    left: 0; */
     display: flex;
     padding: 0 calc(var(--default-spacing)*2);
     padding-top: calc(var(--default-spacing)*5);
@@ -152,15 +137,12 @@ body {
 }
 
 footer {
-    /* background-color: var(--color-gray2); */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: var(--default-spacing);
     padding: calc(var(--default-spacing)*2);
-    /*  margin-top: auto; */
-    /*     margin-bottom: var(--default-spacing); */
     background-image: url("images/web/msharp-logo-transparent10.png");
     background-repeat: repeat;
     background-size: 200px;
@@ -183,11 +165,6 @@ footer {
     /* Standard syntax */
 }
 
-/* @media (min-width: 769px) {
-    .sheet-content {
-width: 50%;
-     }
-} */
 @media (max-width: 768px) {
     footer {
         display: flex;
@@ -195,8 +172,4 @@ width: 50%;
         align-items: center;
         justify-content: center;
     }
-
-    /*     .sheet-content {
-        width: 100%;
-             } */
 }

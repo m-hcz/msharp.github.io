@@ -12,7 +12,6 @@ button {
     fill: var(--color-text);
     cursor: pointer;
     padding: var(--default-spacing);
-    /* background-color: var(--color-gray2); */
     border: none;
 }
 
@@ -26,24 +25,6 @@ button:hover {
     color: var(--color-text);
     fill: var(--color-text);
 }
-
-/* a::after {
-            content: '';
-            position: absolute;
-            width: 5px;
-            height: 100%;
-            background-color: var(--color-gray2);
-            top: 0;
-            right: 0;
-            transform-origin: bottom;
-            transform: scaleY(0);
-            transition: transform .3s ease-in-out;
-        }
-
-        a:hover::after {
-            transform-origin:top;
-            transform: scaleY(1);
-        } */
 
 a::before,
 button::before {
@@ -60,19 +41,6 @@ button::before {
     transform: scaleX(0);
     transition: transform var(--def-link-duration) ease-in-out;
 }
-
-/* a::after,
-button::after {
-    content: '';
-    position: absolute;
-    width: 50px;
-    max-width: 100%;
-    height: 2px;
-    background: var(--color-text-40);
-    bottom: 5px;
-    left: 0;
-    transform-origin: right;
-} */
 
 a:hover::before,
 button:hover::before {
@@ -94,7 +62,6 @@ nav ul li a,
 
 .img-close-button {
     align-self: flex-end;
-    /* margin: calc(var(--default-spacing)*2); */
     width: 30px;
     height: 30px;
     cursor: pointer;

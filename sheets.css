@@ -1,21 +1,11 @@
 
 .sheet {
     position: absolute;
-    /*     margin-top: var(--default-spacing);
-        padding-bottom: calc(var(--default-spacing)*5); */
     top: 0;
     left: 100%;
-    /* bottom: 0; */
-  /*    bottom: auto; */
     z-index: 888;
-    /*   background-color: var(--color-black); */
-    /* backdrop-filter: blur(2px);
-       background: var(--color-text-60); */
-    /* flex-direction: column; */
     width: 100%;
     min-height: 100%;
-    /*     
-        height: 100hv; */
     transition: left ease-in-out var(--def-transition-duration);
 }
 
@@ -24,7 +14,6 @@
     display: flex;
     flex-direction: column;
     align-content: stretch;
-    /* align-items: center; */
     justify-content: start;
     flex-wrap: nowrap;
     gap: calc(var(--default-spacing)*3);
