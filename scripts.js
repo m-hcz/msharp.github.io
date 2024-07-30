@@ -11,6 +11,8 @@ Array.from(sheetContents).forEach(element => {
     })
 });
 
+document.querySelector("#year").innerHTML = new Date().getFullYear();
+
 function showSidebar() {
     adjustHeight()
     sidebar.style.left = 0
