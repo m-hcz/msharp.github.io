@@ -32,7 +32,7 @@ button::before {
     position: absolute;
     width: 100%;
     height: 5px;
-    background: var(--color-text-40);
+   /*  background: var(--color-text-40); */
     background-image: url(images/web/icon-msharp-5.svg);
     background-repeat: repeat-x;
     bottom: 0;
@@ -58,11 +58,27 @@ nav ul li a,
 .item-link {
     font-size: clamp(1.1rem, 5vw, 1.5rem);
     font-weight: bold;
+    
 }
+.main-content a::after,
+footer a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: var(--color-text-40);
+    bottom: 2px;
+    left: 0;
+}
+
 
 .img-close-button {
     align-self: flex-end;
     width: 30px;
     height: 30px;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
 }
