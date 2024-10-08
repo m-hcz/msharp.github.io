@@ -226,14 +226,11 @@ let htmlsgciviltools = `
 `;
 let htmlsgdatavalid = `
                     <img class="icon" src="images/projects/img-app-sgdesignvalidator.png" alt="">
-                    <h2>SG Civil Tools</h2>
+                    <h2>SG Civil Design Validator</h2>
                     <div class="sheet-part">
                         <h3>Web:</h3>
                         <a href="https://sg.ccsupport.cz/sgcivildesignvalidator" target="_blank">
                             <p>sg.ccsupport.cz/sgcivildesignvalidator</p>
-                        </a>
-                        <a href="https://sg.ccsupport.cz/sgcivilvalidator" target="_blank">
-                            <p>sg.ccsupport.cz/sgcivilvalidator</p>
                         </a>
                     </div>
                     <div class="sheet-part">
@@ -242,12 +239,12 @@ let htmlsgdatavalid = `
                     </div>
                     <div class="sheet-part">
                         <h3>Description:</h3>
-                        <p class="sheet-description">Add-ons for Autodesk Civil 3D. Help users to validate their design and data based on Czech standards.</p>
+                        <p class="sheet-description">Add-on for Autodesk Civil 3D. Help users to validate their design based on Czech standards.</p>
                     </div>
 `;
 let htmlsgbimcomplete = `
                     <img class="icon" src="images/projects/img-app-sgcivilbimcomplete.png" alt="">
-                    <h2>SG Civil Tools</h2>
+                    <h2>SG Civil BIM Complete</h2>
                     <div class="sheet-part">
                         <h3>Web:</h3>
                         <a href="https://sg.ccsupport.cz/sgcivilbimcomplete" target="_blank">
@@ -260,7 +257,7 @@ let htmlsgbimcomplete = `
                     </div>
                     <div class="sheet-part">
                         <h3>Description:</h3>
-                        <p class="sheet-description">Add-on for Autodesk Civil 3D. Helps users to create BIM data.</p>
+                        <p class="sheet-description">Add-on for Autodesk Civil 3D. Helps users to create adn validate BIM data.</p>
                     </div>
 `;
 let htmlskoda = `
