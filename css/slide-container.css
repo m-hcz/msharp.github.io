@@ -1,0 +1,66 @@
+.slide-text-container {
+    color: inherit;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 30px 60px;
+    width: var(--carousel-width);
+    height: var(--carousel-height);
+    overflow: hidden;
+}
+
+.about-text-container {
+    position: relative;
+    border-radius: var(--carousel-radius);
+    border: 1px solid var(--profile-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 30px;
+    width: var(--carousel-width);
+    height: var(--carousel-height);
+    overflow: hidden;
+}
+
+.card-container {
+    position: relative;
+    border-radius: var(--carousel-radius);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 30px;
+    width: var(--carousel-width);
+    min-height: var(--carousel-height);
+    overflow: hidden;
+}
+
+.image-container {
+    width: var(--carousel-width);
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center; 
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: fill;
+}
+
+.project-full {
+    width: 100%;
+    background-color: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}

@@ -1,0 +1,22 @@
+.profile-colors {
+    color: var(--text-gray-color) !important;
+}
+.sg-colors {
+    background-color: #00628f !important;
+    color: white !important;
+}
+
+.cc-colors {
+    background-color: #7a0e11 !important;
+    color: white !important;
+}
+
+.myskoda-colors {
+    background-color: #2a573d !important;
+    color: white !important;
+}
+
+.cis-colors {
+    background-color: #457286 !important;
+    color: white !important;
+}

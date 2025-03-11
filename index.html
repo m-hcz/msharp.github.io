@@ -4,13 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Y0MK5HP96"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9Y0MK5HP96');
+    </script>
+
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/links.css">
-    <link rel="stylesheet" href="css/sheets.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/filters.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/project-colors.css">
+    <link rel="stylesheet" href="css/slide-container.css">
 
     <meta name="description" content="A portfolio page for MSharp.cz">
-    <meta name="keywords" content="portfolio, msharp, msharp.cz, programmer, contractor, self-employed, iOS, Windows, desktop, web, c#, swift, blazor">
+    <meta name="keywords"
+        content="portfolio, msharp, msharp.cz, programmer, contractor, self-employed, iOS, Windows, desktop, web, c#, swift, blazor">
 
     <title>MSharp</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -19,150 +34,407 @@
 <body>
     <div class="page">
         <div class="main">
-            <div class="sidebar">
-                <div onclick=hideAllSheets() class="blur-bg">
-                    <div class="sidebar-panel">
-                        <img class="img-close-button" onclick=hideAllSheets() src="images/web/icon-close-button.svg"
-                            alt="msharp m# msharp.cz m#.cz IT development design csharp c# ios .net windows apple web">
-                        <ul>
-                            <li><a onclick=btnClickHomeInSidebar()>Home</a></li>
-                            <li><a onclick=btnClickProjects()>Projects</a></li>
-                            <li><a onclick=btnClickAbout()>About</a></li>
-                        </ul>
+            <a class="msharp-logo profile-colors" href="index.html">
+                <svg width="90" height="70" viewBox="0 0 152 145" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.194225 100.266L15.7727 84.6872L47.1284 92.4432L40.4993 67.2526L62.6406 89.3938L70.2641 118.164L0.194225 100.266ZM82.992 105.436L39.0078 61.4521L53.6581 46.8017L97.6424 90.786L82.992 105.436ZM44.1453 144.283L4.23799 104.376L40.8971 113.656L57.8345 130.594L44.1453 144.283ZM107.288 46.5365L114.281 39.5428L121.441 48.0944L114.414 55.1213L123.032 65.3964L115.176 73.2519L106.559 62.9768L98.239 71.2963L91.0464 62.7779L99.3328 54.4915L90.7812 44.2826L82.528 52.5359L75.3685 43.9843L83.6218 35.7311L75.0039 25.4559L82.8594 17.6004L91.5104 27.8424L98.6036 20.7492L105.73 29.334L98.6367 36.4271L107.288 46.5365ZM92.2396 8.22019L100.128 0.33153L108.746 10.6067L117.132 2.22083L124.258 10.8055L115.939 19.1251L124.523 29.3008L132.843 20.9813L139.969 29.566L131.65 37.8855L140.268 48.1607L132.412 56.0162L92.2396 8.22019Z"
+                        fill="currentColor" />
+                </svg>
+            </a>
+
+            <a class="profile-full" href="about.html">
+                <div class="profile flex-column-center">
+                    <img class="profile-picture" src="images/profile/img-michal.png" alt="">
+                    <h2>Hi! I'm Michal.</h2>
+                    <div>
+                        <h1>Programmer.</h1>
+                        <p>But I do everything :)</p>
                     </div>
+                    <div class="profile-tag">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 1C5.23969 1 3 3.01594 3 5.5C3 9.5 8 15 8 15C8 15 13 9.5 13 5.5C13 3.01594 10.7603 1 8 1ZM8 8C7.60444 8 7.21776 7.8827 6.88886 7.66294C6.55996 7.44318 6.30362 7.13082 6.15224 6.76537C6.00087 6.39991 5.96126 5.99778 6.03843 5.60982C6.1156 5.22186 6.30608 4.86549 6.58579 4.58579C6.86549 4.30608 7.22186 4.1156 7.60982 4.03843C7.99778 3.96126 8.39991 4.00087 8.76537 4.15224C9.13082 4.30362 9.44318 4.55996 9.66294 4.88886C9.8827 5.21776 10 5.60444 10 6C9.99942 6.53026 9.78852 7.03863 9.41357 7.41357C9.03863 7.78852 8.53026 7.99942 8 8Z" />
+                        </svg>
+                        &nbsp;Czech Republic
+                    </div>
+                </div>
+            </a>
+
+            <div class="filters">
+                <div class="filter active" data-filter="all">All</div>
+                <div class="filter" data-filter="windows">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M22 2L11.2 3.6V11.6L22 11.5V2ZM10.2 12.5L2 12.4V19.2L10.1 20.3L10.2 12.5ZM2 4.8V11.6H10.1V3.7L2 4.8ZM11.1 12.5V20.4L22 22V12.6L11.1 12.5Z"
+                            fill="currentColor" />
+                    </svg>
+                    &nbsp;Windows
+                </div>
+                <div class="filter" data-filter="web">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.36 14C16.44 13.34 16.5 12.68 16.5 12C16.5 11.32 16.44 10.66 16.36 10H19.74C19.9 10.64 20 11.31 20 12C20 12.69 19.9 13.36 19.74 14M14.59 19.56C15.19 18.45 15.65 17.25 15.97 16H18.92C17.9512 17.6683 16.4141 18.932 14.59 19.56ZM14.34 14H9.66C9.56 13.34 9.5 12.68 9.5 12C9.5 11.32 9.56 10.65 9.66 10H14.34C14.43 10.65 14.5 11.32 14.5 12C14.5 12.68 14.43 13.34 14.34 14ZM12 19.96C11.17 18.76 10.5 17.43 10.09 16H13.91C13.5 17.43 12.83 18.76 12 19.96ZM8 8H5.08C6.03864 6.32703 7.57466 5.06124 9.4 4.44C8.8 5.55 8.35 6.75 8 8ZM5.08 16H8C8.35 17.25 8.8 18.45 9.4 19.56C7.57827 18.9323 6.04429 17.6682 5.08 16ZM4.26 14C4.1 13.36 4 12.69 4 12C4 11.31 4.1 10.64 4.26 10H7.64C7.56 10.66 7.5 11.32 7.5 12C7.5 12.68 7.56 13.34 7.64 14M12 4.03C12.83 5.23 13.5 6.57 13.91 8H10.09C10.5 6.57 11.17 5.23 12 4.03ZM18.92 8H15.97C15.6565 6.76161 15.1931 5.56611 14.59 4.44C16.43 5.07 17.96 6.34 18.92 8ZM12 2C6.47 2 2 6.5 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2Z"
+                            fill="currentColor" />
+                    </svg>
+                    &nbsp;Web
+                </div>
+                <div class="filter" data-filter="ios">
+                    <svg width="20" height="20" viewBox="0 0 24 24" stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10 3H8C7.46957 3 6.96086 3.21071 6.58579 3.58579C6.21071 3.96086 6 4.46957 6 5V19C6 19.5304 6.21071 20.0391 6.58579 20.4142C6.96086 20.7893 7.46957 21 8 21H16C16.5304 21 17.0391 20.7893 17.4142 20.4142C17.7893 20.0391 18 19.5304 18 19V5C18 4.46957 17.7893 3.96086 17.4142 3.58579C17.0391 3.21071 16.5304 3 16 3H14M10 3H14M10 3V4M14 3V4M10 4C10 4.26522 10.1054 4.51957 10.2929 4.70711C10.4804 4.89464 10.7348 5 11 5H13C13.2652 5 13.5196 4.89464 13.7071 4.70711C13.8946 4.51957 14 4.26522 14 4M10 4H14"
+                            fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    &nbsp;iOS
                 </div>
             </div>
+            <div class="projects">
+                <div class="carousel-container" data-carousel-id="1" data-category="windows">
+                    <div class="carousel sg-colors">
+                        <div class="slide flex-column-center">
+                            <img src="images/projects/sgciviltools/img-app-sgciviltools.png"
+                                style="width: 100px; height: 100px;" alt="Slide 1">
+                            <h2>SG Civil Tools</h2>
+                            <div class="slide-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22 2L11.2 3.6V11.6L22 11.5V2ZM10.2 12.5L2 12.4V19.2L10.1 20.3L10.2 12.5ZM2 4.8V11.6H10.1V3.7L2 4.8ZM11.1 12.5V20.4L22 22V12.6L11.1 12.5Z"
+                                        fill="currentColor" />
+                                </svg>
+                                &nbsp;Windows
+                            </div>
+                        </div>
+                        <div class="slide flex-column-center sg-colors">
+                            <div class="slide-text-container">
+                                <h2>SG Civil Tools</h2>
+                                <p>Add-on for Autodesk Civil 3D. Help users to design linear structures based on Czech
+                                    standards.</p>
+                            </div>
+                        </div>
+                        <div class="slide flex-column-center sg-colors">
+                            <img src="/images/projects/sgciviltools/stakingpointgenerator.png" alt="">
+                        </div>
+                        <div class="slide flex-column-center sg-colors">
+                            <img src="/images/projects/sgciviltools/alignmentreportdialog.png" alt="">
+                        </div>
 
-            <nav>
-                <a onclick=btnClickHome()>
-                    <img class="msharp-logo" src="images/web/msharp-logo-300x120.png"
-                        alt="msharp m# IT development design csharp c# ios .net windows apple web">
-                </a>
-                <ul>
-                    <li class="hide-on-mobile"><a onclick=btnClickHome()>Home</a></li>
-                    <li class="hide-on-mobile"><a onclick=btnClickProjects()>Projects</a></li>
-                    <li class="hide-on-mobile"><a onclick=btnClickAbout()>About</a></li>
-                    <li class="menu-button" onclick=showSidebar()>
-                        <img src="images/web/icon-burger.svg">
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="main-content">
-                <div class="container content-home">
-                    <p>&nbsp;</p>
-
-                    <div class="project-item">
-                        <p class="item-link">Use M# for everything.</p>
-                        <p class="item-description">&nbsp;</p>
                     </div>
+                    <button class="prev">
+                        <div class="btn-next">&#10094;</div>
+                    </button>
+                    <a class="carousel-link" href="sgciviltools.html"></a>
+                    <button class="next">
+                        <div class="btn-next">&#10095;</div>
+                    </button>
                 </div>
-                <div class="container content-projects">
-                    <p>Projects</p>
 
-                    <div class="project-item">
-                        <a onclick="showSheet('webcccadtools')" class="item-link">CCcadTools</a>
-                        <div class="item-description">
-                            <img src="images/web/icon-web.svg">
-                            <p>Web page</p>
+                <div class="carousel-container" data-carousel-id="2" data-category="windows">
+                    <div class="carousel cc-colors">
+                        <div class="slide flex-column-center">
+                            <img src="images/projects/cccadtools/CCCadToolsLogo.png"
+                                style="width: 100px; height: 100px;" alt="Slide 1">
+                            <h2>CC Cad Tools</h2>
+                            <div class="slide-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22 2L11.2 3.6V11.6L22 11.5V2ZM10.2 12.5L2 12.4V19.2L10.1 20.3L10.2 12.5ZM2 4.8V11.6H10.1V3.7L2 4.8ZM11.1 12.5V20.4L22 22V12.6L11.1 12.5Z"
+                                        fill="currentColor" />
+                                </svg>
+                                &nbsp;Windows
+                            </div>
                         </div>
-                    </div>
+                        <div class="slide flex-column-center cc-colors">
+                            <div class="slide-text-container">
+                                <h2>CC Cad Tools</h2>
+                                <p>Add-on for all Autodesk Autocad based products. Implements features that are not
+                                    available in the software.</p>
+                            </div>
+                        </div>
+                        <div class="slide flex-column-center cc-colors">
+                            <img src="/images/projects/cccadtools/filemanager.png" alt="">
+                        </div>
+                        <div class="slide flex-column-center cc-colors">
+                            <img src="/images/projects/cccadtools/surfacestripping.png" alt="">
+                        </div>
 
-                    <div class="project-item">
-                        <a onclick="showSheet('cccadtools')" class="item-link">CCcadTools</a>
-                        <div class="item-description">
-                            <img src="images/web/icon-windows.svg">
-                            <p>Add-on for Autodesk AutoCAD base products</p>
-                        </div>
                     </div>
-                    <div class="project-item">
-                        <a onclick="showSheet('webccsupport')" class="item-link">CCsupport</a>
-                        <div class="item-description">
-                            <img src="images/web/icon-web.svg">
-                            <p>Web page</p>
-                        </div>
-                    </div>
-                    <div class="project-item">
-                        <a onclick="showSheet('sgciviltools')" class="item-link">SG Civil Tools</a>
-                        <div class="item-description">
-                            <img src="images/web/icon-windows.svg">
-                            <p>Add-on for Autodesk Civil 3D</p>
-                        </div>
-                    </div>
-                    <div class="project-item">
-                        <a onclick="showSheet('sgdatavalid')" class="item-link">SG Civil Design Validator</a>
-                        <div class="item-description">
-                            <img src="images/web/icon-windows.svg">
-                            <p>Add-on for Autodesk Civil 3D</p>
-                        </div>
-                    </div>
-                    <div class="project-item">
-                        <a onclick="showSheet('sgbimcomplete')" class="item-link">SG Civil BIM Complete</a>
-                        <div class="item-description">
-                            <img src="images/web/icon-windows.svg">
-                            <p>Add-on for Autodesk Civil 3D</p>
-                        </div>
-                    </div>
-                    <div class="project-item">
-                        <a onclick="showSheet('skoda')" class="item-link">MyŠkoda Essentials</a>
-                        <div class="item-description">
-                            <img src="images/web/icon-apple.svg">
-                            <p>iOS app</p>
-                        </div>
-                    </div>
-                    <div class="project-item">
-                        <a onclick="showSheet('cis')" class="item-link">Calendar Information Service</a>
-                        <div class="item-description">
-                            <img src="images/web/icon-apple.svg">
-                            <p>iOS app</p>
-                        </div>
-                    </div>
+                    <button class="prev">
+                        <div class="btn-next">&#10094;</div>
+                    </button>
+                    <a class="carousel-link" href="cccadtools.html"></a>
+                    <button class="next">
+                        <div class="btn-next">&#10095;</div>
+                    </button>
                 </div>
-                <div class="container content-about">
-                    <p>About</p>
 
-                    <div class="project-item">
-                        <a onclick="showSheet('michal')" class="item-link">Michal Heczko</a>
-                        <div class="item-description">
-                            <img src="images/web/icon-code.svg">
-                            <p>Programmer</p>
+                <div class="carousel-container" data-carousel-id="3" data-category="web">
+                    <div class="carousel cc-colors">
+                        <div class="slide flex-column-center">
+                            <img src="images/projects/cccadtools/img-web-cccadtools.png"
+                                style="width: 100px; height: 100px;" alt="Slide 1">
+                            <h2>CC Cad Tools - Web</h2>
+                            <div class="slide-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.36 14C16.44 13.34 16.5 12.68 16.5 12C16.5 11.32 16.44 10.66 16.36 10H19.74C19.9 10.64 20 11.31 20 12C20 12.69 19.9 13.36 19.74 14M14.59 19.56C15.19 18.45 15.65 17.25 15.97 16H18.92C17.9512 17.6683 16.4141 18.932 14.59 19.56ZM14.34 14H9.66C9.56 13.34 9.5 12.68 9.5 12C9.5 11.32 9.56 10.65 9.66 10H14.34C14.43 10.65 14.5 11.32 14.5 12C14.5 12.68 14.43 13.34 14.34 14ZM12 19.96C11.17 18.76 10.5 17.43 10.09 16H13.91C13.5 17.43 12.83 18.76 12 19.96ZM8 8H5.08C6.03864 6.32703 7.57466 5.06124 9.4 4.44C8.8 5.55 8.35 6.75 8 8ZM5.08 16H8C8.35 17.25 8.8 18.45 9.4 19.56C7.57827 18.9323 6.04429 17.6682 5.08 16ZM4.26 14C4.1 13.36 4 12.69 4 12C4 11.31 4.1 10.64 4.26 10H7.64C7.56 10.66 7.5 11.32 7.5 12C7.5 12.68 7.56 13.34 7.64 14M12 4.03C12.83 5.23 13.5 6.57 13.91 8H10.09C10.5 6.57 11.17 5.23 12 4.03ZM18.92 8H15.97C15.6565 6.76161 15.1931 5.56611 14.59 4.44C16.43 5.07 17.96 6.34 18.92 8ZM12 2C6.47 2 2 6.5 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2Z"
+                                        fill="currentColor" />
+                                </svg>
+                                &nbsp;Web
+                            </div>
                         </div>
+                        <div class="slide flex-column-center cc-colors">
+                            <div class="slide-text-container">
+                                <h2>CC Cad Tools - Web</h2>
+                                <p>Product page for add-on CCcadTools.</p>
+                            </div>
+                        </div>
+                        <div class="slide flex-column-center cc-colors">
+                            <img src="/images/projects/cccadtools/landingpage.png" alt="">
+                        </div>
+                        <div class="slide flex-column-center cc-colors">
+                            <img src="/images/projects/cccadtools/functions.png" alt="">
+                        </div>
+
                     </div>
-                    <div class="project-item">
-                        <a onclick="showSheet('skills')" class="item-link">Skills</a>
-                        <p class="item-description">&nbsp;</p>
-                    </div>
-                    <div class="project-item">
-                        <a onclick="showSheet('experience')" class="item-link">Experience</a>
-                        <p class="item-description">&nbsp;</p>
-                    </div>
-                    <div class="project-item">
-                        <a onclick="showSheet('education')" class="item-link">Education</a>
-                        <p class="item-description">&nbsp;</p>
-                    </div>
+                    <button class="prev">
+                        <div class="btn-next">&#10094;</div>
+                    </button>
+                    <a class="carousel-link" href="cccadtoolsweb.html"></a>
+                    <button class="next">
+                        <div class="btn-next">&#10095;</div>
+                    </button>
                 </div>
+
+                <div class="carousel-container" data-carousel-id="4" data-category="windows">
+                    <div class="carousel sg-colors">
+                        <div class="slide flex-column-center">
+                            <img src="images/projects/sgcivilbimcomplete/img-app-sgcivilbimcomplete.png"
+                                style="width: 100px; height: 100px;" alt="Slide 1">
+                            <h2>SG Civil BIM Complete</h2>
+                            <div class="slide-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22 2L11.2 3.6V11.6L22 11.5V2ZM10.2 12.5L2 12.4V19.2L10.1 20.3L10.2 12.5ZM2 4.8V11.6H10.1V3.7L2 4.8ZM11.1 12.5V20.4L22 22V12.6L11.1 12.5Z"
+                                        fill="currentColor" />
+                                </svg>
+                                &nbsp;Windows
+                            </div>
+                        </div>
+                        <div class="slide flex-column-center sg-colors">
+                            <div class="slide-text-container">
+                                <h2>SG Civil BIM Complete</h2>
+                                <p>Add-on for Autodesk Civil 3D. Helps users to create adn validate BIM data.</p>
+                            </div>
+                        </div>
+                        <div class="slide flex-column-center sg-colors">
+                            <img src="/images/projects/sgcivilbimcomplete/bimcomplete.png" alt="">
+                        </div>
+                        <div class="slide flex-column-center sg-colors">
+                            <img src="/images/projects/sgcivilbimcomplete/propsetsvalidation.png" alt="">
+                        </div>
+
+                    </div>
+                    <button class="prev">
+                        <div class="btn-next">&#10094;</div>
+                    </button>
+                    <a class="carousel-link" href="sgcivilbimcomplete.html"></a>
+                    <button class="next">
+                        <div class="btn-next">&#10095;</div>
+                    </button>
+                </div>
+
+                <div class="carousel-container" data-carousel-id="5" data-category="windows">
+                    <div class="carousel sg-colors">
+                        <div class="slide flex-column-center">
+                            <img src="images/projects/sgcivildesignvalidation/img-app-sgdesignvalidator.png"
+                                style="width: 100px; height: 100px;" alt="Slide 1">
+                            <h2>SG Civil Design Validator</h2>
+                            <div class="slide-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22 2L11.2 3.6V11.6L22 11.5V2ZM10.2 12.5L2 12.4V19.2L10.1 20.3L10.2 12.5ZM2 4.8V11.6H10.1V3.7L2 4.8ZM11.1 12.5V20.4L22 22V12.6L11.1 12.5Z"
+                                        fill="currentColor" />
+                                </svg>
+                                &nbsp;Windows
+                            </div>
+                        </div>
+                        <div class="slide flex-column-center sg-colors">
+                            <div class="slide-text-container">
+                                <h2>SG Civil Design Validator</h2>
+                                <p>Add-on for Autodesk Civil 3D. Help users to validate their design based on Czech
+                                    standards.</p>
+                            </div>
+                        </div>
+                        <div class="slide flex-column-center sg-colors">
+                            <img src="/images/projects/sgcivildesignvalidation/datavalidation.png" alt="">
+                        </div>
+                        <div class="slide flex-column-center sg-colors">
+                            <img src="/images/projects/sgcivildesignvalidation/datavalidationinput.png" alt="">
+                        </div>
+
+                    </div>
+                    <button class="prev">
+                        <div class="btn-next">&#10094;</div>
+                    </button>
+                    <a class="carousel-link" href="sgcivildesignvalidator.html"></a>
+                    <button class="next">
+                        <div class="btn-next">&#10095;</div>
+                    </button>
+                </div>
+
+                <div class="carousel-container" data-carousel-id="6" data-category="web">
+                    <div class="carousel sg-colors">
+                        <div class="slide flex-column-center">
+                            <img src="images/projects/ccsupport/img-web-ccsupport.png"
+                                style="width: 100px; height: 100px;" alt="Slide 1">
+                            <h2>CC Support</h2>
+                            <div class="slide-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.36 14C16.44 13.34 16.5 12.68 16.5 12C16.5 11.32 16.44 10.66 16.36 10H19.74C19.9 10.64 20 11.31 20 12C20 12.69 19.9 13.36 19.74 14M14.59 19.56C15.19 18.45 15.65 17.25 15.97 16H18.92C17.9512 17.6683 16.4141 18.932 14.59 19.56ZM14.34 14H9.66C9.56 13.34 9.5 12.68 9.5 12C9.5 11.32 9.56 10.65 9.66 10H14.34C14.43 10.65 14.5 11.32 14.5 12C14.5 12.68 14.43 13.34 14.34 14ZM12 19.96C11.17 18.76 10.5 17.43 10.09 16H13.91C13.5 17.43 12.83 18.76 12 19.96ZM8 8H5.08C6.03864 6.32703 7.57466 5.06124 9.4 4.44C8.8 5.55 8.35 6.75 8 8ZM5.08 16H8C8.35 17.25 8.8 18.45 9.4 19.56C7.57827 18.9323 6.04429 17.6682 5.08 16ZM4.26 14C4.1 13.36 4 12.69 4 12C4 11.31 4.1 10.64 4.26 10H7.64C7.56 10.66 7.5 11.32 7.5 12C7.5 12.68 7.56 13.34 7.64 14M12 4.03C12.83 5.23 13.5 6.57 13.91 8H10.09C10.5 6.57 11.17 5.23 12 4.03ZM18.92 8H15.97C15.6565 6.76161 15.1931 5.56611 14.59 4.44C16.43 5.07 17.96 6.34 18.92 8ZM12 2C6.47 2 2 6.5 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2Z"
+                                        fill="currentColor" />
+                                </svg>
+                                &nbsp;Web
+                            </div>
+                        </div>
+                        <div class="slide flex-column-center sg-colors">
+                            <div class="slide-text-container">
+                                <h2>CC Support</h2>
+                                <p>Web help page for all Sudop Group applications.</p>
+                            </div>
+                        </div>
+                        <div class="slide flex-column-center sg-colors">
+                            <img src="/images/projects/ccsupport/applications.png" alt="">
+                        </div>
+                        <div class="slide flex-column-center sg-colors">
+                            <img src="/images/projects/ccsupport/subassemblies.png" alt="">
+                        </div>
+
+                    </div>
+                    <button class="prev">
+                        <div class="btn-next">&#10094;</div>
+                    </button>
+                    <a class="carousel-link" href="ccsupport.html"></a>
+                    <button class="next">
+                        <div class="btn-next">&#10095;</div>
+                    </button>
+                </div>
+
+                <div class="carousel-container" data-carousel-id="7" data-category="ios">
+                    <div class="carousel myskoda-colors">
+                        <div class="slide flex-column-center">
+                            <img src="images/projects/myskoda/img-ios-skoda.webp" style="width: 100px; height: 100px;"
+                                alt="Slide 1">
+                            <h2>MyŠkoda Essentials</h2>
+                            <div class="slide-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" stroke="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10 3H8C7.46957 3 6.96086 3.21071 6.58579 3.58579C6.21071 3.96086 6 4.46957 6 5V19C6 19.5304 6.21071 20.0391 6.58579 20.4142C6.96086 20.7893 7.46957 21 8 21H16C16.5304 21 17.0391 20.7893 17.4142 20.4142C17.7893 20.0391 18 19.5304 18 19V5C18 4.46957 17.7893 3.96086 17.4142 3.58579C17.0391 3.21071 16.5304 3 16 3H14M10 3H14M10 3V4M14 3V4M10 4C10 4.26522 10.1054 4.51957 10.2929 4.70711C10.4804 4.89464 10.7348 5 11 5H13C13.2652 5 13.5196 4.89464 13.7071 4.70711C13.8946 4.51957 14 4.26522 14 4M10 4H14"
+                                        fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />;
+                                </svg>
+                                &nbsp;iOS
+                            </div>
+                        </div>
+                        <div class="slide flex-column-center myskoda-colors">
+                            <div class="slide-text-container">
+                                <h2>MyŠkoda Essentials</h2>
+                                <p>App for remote controlling Škoda cars.</p>
+                            </div>
+                        </div>
+                        <div class="slide flex-column-center myskoda-colors">
+                            <img src="/images/projects/myskoda/skoda-1.webp" alt="">
+                        </div>
+                        <div class="slide flex-column-center myskoda-colors">
+                            <img src="/images/projects/myskoda/skoda-2.webp" alt="">
+                        </div>
+
+                    </div>
+                    <button class="prev">
+                        <div class="btn-next">&#10094;</div>
+                    </button>
+                    <a class="carousel-link" href="myskoda.html"></a>
+                    <button class="next">
+                        <div class="btn-next">&#10095;</div>
+                    </button>
+                </div>
+
+                <div class="carousel-container" data-carousel-id="8" data-category="ios">
+                    <div class="carousel cis-colors">
+                        <div class="slide flex-column-center">
+                            <img src="images/projects/cis/img-iso-cis.webp" style="width: 100px; height: 100px;"
+                                alt="Slide 1">
+                            <h2>Calendar Information Service</h2>
+                            <div class="slide-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" stroke="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10 3H8C7.46957 3 6.96086 3.21071 6.58579 3.58579C6.21071 3.96086 6 4.46957 6 5V19C6 19.5304 6.21071 20.0391 6.58579 20.4142C6.96086 20.7893 7.46957 21 8 21H16C16.5304 21 17.0391 20.7893 17.4142 20.4142C17.7893 20.0391 18 19.5304 18 19V5C18 4.46957 17.7893 3.96086 17.4142 3.58579C17.0391 3.21071 16.5304 3 16 3H14M10 3H14M10 3V4M14 3V4M10 4C10 4.26522 10.1054 4.51957 10.2929 4.70711C10.4804 4.89464 10.7348 5 11 5H13C13.2652 5 13.5196 4.89464 13.7071 4.70711C13.8946 4.51957 14 4.26522 14 4M10 4H14"
+                                        fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                &nbsp;iOS
+                            </div>
+                        </div>
+                        <div class="slide flex-column-center cis-colors">
+                            <div class="slide-text-container">
+                                <h2>Calendar Information Service</h2>
+                                <p>Calendar information service (timetracking, reports, workfunds, namedays, bank
+                                    holidays).</p>
+                            </div>
+                        </div>
+                        <div class="slide flex-column-center cis-colors">
+                            <img src="/images/projects/cis/cis-1.webp" alt="">
+                        </div>
+                        <div class="slide flex-column-center cis-colors">
+                            <img src="/images/projects/cis/cis-2.webp" alt="">
+                        </div>
+
+                    </div>
+                    <button class="prev">
+                        <div class="btn-next">&#10094;</div>
+                    </button>
+                    <a class="carousel-link" href="cis.html"></a>
+                    <button class="next">
+                        <div class="btn-next">&#10095;</div>
+                    </button>
+                </div>
+
             </div>
         </div>
 
-        <footer>
-            <p>Inspired by <a target="_blank" href="https://en.wikipedia.org/wiki/Think_Small">Think small.</a></p>
+        <footer class="profile-colors">
             <p class="note">Copyright Ⓒ <span id="year"></span>. All Rights Reserved.</p>
-            <a href="mailto:info@msharp.cz">
-                <img src="images/web/icon-email.svg">
-            </a>
+            <div>
+                <a href="mailto:info@msharp.cz">
+                    <svg width="30" height="30" viewBox="0 0 20 20" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.3327 5.00004C18.3327 4.08337 17.5827 3.33337 16.666 3.33337H3.33268C2.41602 3.33337 1.66602 4.08337 1.66602 5.00004V15C1.66602 15.9167 2.41602 16.6667 3.33268 16.6667H16.666C17.5827 16.6667 18.3327 15.9167 18.3327 15V5.00004ZM16.666 5.00004L9.99935 9.16671L3.33268 5.00004H16.666ZM16.666 15H3.33268V6.66671L9.99935 10.8334L16.666 6.66671V15Z"
+                            fill="currentColor" />
+                    </svg>
+                </a>
+                <a href="https://github.com/m-hcz" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 20 20" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.99935 1.66663C8.905 1.66663 7.82137 1.88217 6.81032 2.30096C5.79927 2.71975 4.88061 3.33358 4.10679 4.1074C2.54399 5.67021 1.66602 7.78982 1.66602 9.99996C1.66602 13.6833 4.05768 16.8083 7.36602 17.9166C7.78268 17.9833 7.91602 17.725 7.91602 17.5V16.0916C5.60768 16.5916 5.11602 14.975 5.11602 14.975C4.73268 14.0083 4.19102 13.75 4.19102 13.75C3.43268 13.2333 4.24935 13.25 4.24935 13.25C5.08268 13.3083 5.52435 14.1083 5.52435 14.1083C6.24935 15.375 7.47435 15 7.94935 14.8C8.02435 14.2583 8.24102 13.8916 8.47435 13.6833C6.62435 13.475 4.68268 12.7583 4.68268 9.58329C4.68268 8.65829 4.99935 7.91663 5.54102 7.32496C5.45768 7.11663 5.16602 6.24996 5.62435 5.12496C5.62435 5.12496 6.32435 4.89996 7.91602 5.97496C8.57435 5.79163 9.29102 5.69996 9.99935 5.69996C10.7077 5.69996 11.4243 5.79163 12.0827 5.97496C13.6743 4.89996 14.3743 5.12496 14.3743 5.12496C14.8327 6.24996 14.541 7.11663 14.4577 7.32496C14.9993 7.91663 15.316 8.65829 15.316 9.58329C15.316 12.7666 13.366 13.4666 11.5077 13.675C11.8077 13.9333 12.0827 14.4416 12.0827 15.2166V17.5C12.0827 17.725 12.216 17.9916 12.641 17.9166C15.9493 16.8 18.3327 13.6833 18.3327 9.99996C18.3327 8.90561 18.1171 7.82198 17.6983 6.81093C17.2796 5.79988 16.6657 4.88122 15.8919 4.1074C15.1181 3.33358 14.1994 2.71975 13.1884 2.30096C12.1773 1.88217 11.0937 1.66663 9.99935 1.66663Z"
+                            fill="currentColor" />
+                    </svg>
+                </a>
+            </div>
         </footer>
     </div>
-
-    <div class="sheet">
-        <div onclick=hideAllSheets() class="blur-bg">
-            <div class="sheet-content">
-                <img class="img-close-button" onclick=hideAllSheets() src="images/web/icon-close-button.svg"
-                    alt="msharp m# msharp.cz m#.cz IT development design csharp c# ios .net windows apple web">
-                <div id="sheet-content-insert"></div>
-            </div>
-        </div>
-    </div>
-    <script src="scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

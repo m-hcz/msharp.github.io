@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Y0MK5HP96"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9Y0MK5HP96');
+    </script>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/filters.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/project-colors.css">
+    <link rel="stylesheet" href="css/slide-container.css">
+
+    <meta name="description" content="A portfolio page for MSharp.cz">
+    <meta name="keywords"
+        content="portfolio, msharp, msharp.cz, programmer, contractor, self-employed, iOS, Windows, desktop, web, c#, swift, blazor">
+
+    <title>MSharp - About</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <div class="page">
+        <div class="main">
+            <a class="msharp-logo profile-colors" href="index.html">
+                <svg width="90" height="70" viewBox="0 0 152 145" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.194225 100.266L15.7727 84.6872L47.1284 92.4432L40.4993 67.2526L62.6406 89.3938L70.2641 118.164L0.194225 100.266ZM82.992 105.436L39.0078 61.4521L53.6581 46.8017L97.6424 90.786L82.992 105.436ZM44.1453 144.283L4.23799 104.376L40.8971 113.656L57.8345 130.594L44.1453 144.283ZM107.288 46.5365L114.281 39.5428L121.441 48.0944L114.414 55.1213L123.032 65.3964L115.176 73.2519L106.559 62.9768L98.239 71.2963L91.0464 62.7779L99.3328 54.4915L90.7812 44.2826L82.528 52.5359L75.3685 43.9843L83.6218 35.7311L75.0039 25.4559L82.8594 17.6004L91.5104 27.8424L98.6036 20.7492L105.73 29.334L98.6367 36.4271L107.288 46.5365ZM92.2396 8.22019L100.128 0.33153L108.746 10.6067L117.132 2.22083L124.258 10.8055L115.939 19.1251L124.523 29.3008L132.843 20.9813L139.969 29.566L131.65 37.8855L140.268 48.1607L132.412 56.0162L92.2396 8.22019Z"
+                        fill="currentColor" />
+                </svg>
+            </a>
+
+            <div class="profile-full">
+                <div class="profile flex-column-center">
+                    <img class="profile-picture" src="images/profile/img-michal.png" alt="">
+                    <h2>Hi! I'm Michal.</h2>
+                    <div>
+                        <h1>Programmer.</h1>
+                        <p>But I do everything :)</p>
+                    </div>
+                    <div class="profile-tag">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 1C5.23969 1 3 3.01594 3 5.5C3 9.5 8 15 8 15C8 15 13 9.5 13 5.5C13 3.01594 10.7603 1 8 1ZM8 8C7.60444 8 7.21776 7.8827 6.88886 7.66294C6.55996 7.44318 6.30362 7.13082 6.15224 6.76537C6.00087 6.39991 5.96126 5.99778 6.03843 5.60982C6.1156 5.22186 6.30608 4.86549 6.58579 4.58579C6.86549 4.30608 7.22186 4.1156 7.60982 4.03843C7.99778 3.96126 8.39991 4.00087 8.76537 4.15224C9.13082 4.30362 9.44318 4.55996 9.66294 4.88886C9.8827 5.21776 10 5.60444 10 6C9.99942 6.53026 9.78852 7.03863 9.41357 7.41357C9.03863 7.78852 8.53026 7.99942 8 8Z" />
+                        </svg>
+                        &nbsp;Czech Republic
+                    </div>
+                </div>
+            </div>
+
+            <div class="filters">
+                <div class="filter active" data-filter="all">All</div>
+                <div class="filter" data-filter="about">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.0007 1.66663C9.1166 1.66663 8.26875 2.01782 7.64363 2.64294C7.01851 3.26806 6.66732 4.1159 6.66732 4.99996C6.66732 5.88401 7.01851 6.73186 7.64363 7.35698C8.26875 7.9821 9.1166 8.33329 10.0007 8.33329C10.8847 8.33329 11.7326 7.9821 12.3577 7.35698C12.9828 6.73186 13.334 5.88401 13.334 4.99996C13.334 4.1159 12.9828 3.26806 12.3577 2.64294C11.7326 2.01782 10.8847 1.66663 10.0007 1.66663ZM8.33398 4.99996C8.33398 4.55793 8.50958 4.13401 8.82214 3.82145C9.1347 3.50889 9.55862 3.33329 10.0007 3.33329C10.4427 3.33329 10.8666 3.50889 11.1792 3.82145C11.4917 4.13401 11.6673 4.55793 11.6673 4.99996C11.6673 5.44199 11.4917 5.86591 11.1792 6.17847C10.8666 6.49103 10.4427 6.66663 10.0007 6.66663C9.55862 6.66663 9.1347 6.49103 8.82214 6.17847C8.50958 5.86591 8.33398 5.44199 8.33398 4.99996ZM14.1673 9.99996H5.83398C5.17094 9.99996 4.53506 10.2634 4.06622 10.7322C3.59738 11.201 3.33398 11.8369 3.33398 12.5C3.33398 14.36 4.09898 15.85 5.35398 16.8583C6.58898 17.85 8.24565 18.3333 10.0007 18.3333C11.7557 18.3333 13.4123 17.85 14.6473 16.8583C15.9007 15.85 16.6673 14.36 16.6673 12.5C16.6673 11.8369 16.4039 11.201 15.9351 10.7322C15.4662 10.2634 14.8304 9.99996 14.1673 9.99996ZM5.83398 11.6666H14.1673C14.3883 11.6666 14.6003 11.7544 14.7566 11.9107C14.9129 12.067 15.0007 12.2789 15.0007 12.5C15.0007 13.8616 14.459 14.8716 13.604 15.5583C12.7273 16.2616 11.4673 16.6666 10.0007 16.6666C8.53398 16.6666 7.27398 16.2616 6.39732 15.5583C5.54232 14.8716 5.00065 13.8616 5.00065 12.5C5.00065 12.2789 5.08845 12.067 5.24473 11.9107C5.40101 11.7544 5.61297 11.6666 5.83398 11.6666Z"
+                            fill="currentColor" />
+                    </svg>
+                    &nbsp;About
+                </div>
+                <div class="filter" data-filter="skills">
+                    <svg width="20" height="20" viewBox="0 0 12 12" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.292969 6.00004L2.76797 3.52504L3.47497 4.23204L1.70697 6.00004L3.47497 7.76804L2.76797 8.47504L0.292969 6.00004ZM4.39347 10.364L6.63647 1.39404L7.60647 1.63654L5.36397 10.6065L4.39347 10.364ZM8.52497 7.76804L10.293 6.00004L8.52497 4.23204L9.23247 3.52504L11.7075 6.00004L9.23247 8.47504L8.52497 7.76804Z"
+                            fill="currentColor" />
+                    </svg>
+                    &nbsp;Skills
+                </div>
+                <div class="filter" data-filter="experience">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4 21C3.45 21 2.97933 20.8043 2.588 20.413C2.19667 20.0217 2.00067 19.5507 2 19V8C2 7.45 2.196 6.97933 2.588 6.588C2.98 6.19667 3.45067 6.00067 4 6H8V4C8 3.45 8.196 2.97933 8.588 2.588C8.98 2.19667 9.45067 2.00067 10 2H14C14.55 2 15.021 2.196 15.413 2.588C15.805 2.98 16.0007 3.45067 16 4V6H20C20.55 6 21.021 6.196 21.413 6.588C21.805 6.98 22.0007 7.45067 22 8V19C22 19.55 21.8043 20.021 21.413 20.413C21.0217 20.805 20.5507 21.0007 20 21H4ZM4 19H20V8H4V19ZM10 6H14V4H10V6Z"
+                            fill="currentColor" />
+                    </svg>
+
+                    &nbsp;Experience
+                </div>
+                <div class="filter" data-filter="education">
+                    <svg width="20" height="20" viewBox="0 0 24 24" stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 9L12 5L2 9L12 13L22 9ZM22 9V15" fill="none" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M6 10.6V16C6 16.7956 6.63214 17.5587 7.75736 18.1213C8.88258 18.6839 10.4087 19 12 19C13.5913 19 15.1174 18.6839 16.2426 18.1213C17.3679 17.5587 18 16.7956 18 16V10.6"
+                            fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    &nbsp;Education
+                </div>
+            </div>
+
+            <div class="projects profile-colors">
+
+                <div class="carousel-container" data-carousel-id="1" data-category="about">
+                    <div class="carousel">
+                        <div class="about-text-container">
+                            <h1>Michal Heczko</h1>
+                            <p>I’m a dedicated and methodical software development professional with a proven track
+                                record in
+                                delivering high-quality applications. As a self-employed developer, I manage every
+                                aspect of the
+                                application lifecycle, from contract negotiation to development and bug fixes. I thrive
+                                in
+                                collaborative environments and continually seek opportunities to enhance my skills. I
+                                embrace
+                                new challenges with dynamic thinking and determination.</p>
+
+                            <div>
+                                <h4>E-mail:</h4>
+                                <a href="mailto:info@msharp.cz">info@msharp.cz</a>
+                            </div>
+                            <div class="slide-tag">
+                                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.0007 1.66663C9.1166 1.66663 8.26875 2.01782 7.64363 2.64294C7.01851 3.26806 6.66732 4.1159 6.66732 4.99996C6.66732 5.88401 7.01851 6.73186 7.64363 7.35698C8.26875 7.9821 9.1166 8.33329 10.0007 8.33329C10.8847 8.33329 11.7326 7.9821 12.3577 7.35698C12.9828 6.73186 13.334 5.88401 13.334 4.99996C13.334 4.1159 12.9828 3.26806 12.3577 2.64294C11.7326 2.01782 10.8847 1.66663 10.0007 1.66663ZM8.33398 4.99996C8.33398 4.55793 8.50958 4.13401 8.82214 3.82145C9.1347 3.50889 9.55862 3.33329 10.0007 3.33329C10.4427 3.33329 10.8666 3.50889 11.1792 3.82145C11.4917 4.13401 11.6673 4.55793 11.6673 4.99996C11.6673 5.44199 11.4917 5.86591 11.1792 6.17847C10.8666 6.49103 10.4427 6.66663 10.0007 6.66663C9.55862 6.66663 9.1347 6.49103 8.82214 6.17847C8.50958 5.86591 8.33398 5.44199 8.33398 4.99996ZM14.1673 9.99996H5.83398C5.17094 9.99996 4.53506 10.2634 4.06622 10.7322C3.59738 11.201 3.33398 11.8369 3.33398 12.5C3.33398 14.36 4.09898 15.85 5.35398 16.8583C6.58898 17.85 8.24565 18.3333 10.0007 18.3333C11.7557 18.3333 13.4123 17.85 14.6473 16.8583C15.9007 15.85 16.6673 14.36 16.6673 12.5C16.6673 11.8369 16.4039 11.201 15.9351 10.7322C15.4662 10.2634 14.8304 9.99996 14.1673 9.99996ZM5.83398 11.6666H14.1673C14.3883 11.6666 14.6003 11.7544 14.7566 11.9107C14.9129 12.067 15.0007 12.2789 15.0007 12.5C15.0007 13.8616 14.459 14.8716 13.604 15.5583C12.7273 16.2616 11.4673 16.6666 10.0007 16.6666C8.53398 16.6666 7.27398 16.2616 6.39732 15.5583C5.54232 14.8716 5.00065 13.8616 5.00065 12.5C5.00065 12.2789 5.08845 12.067 5.24473 11.9107C5.40101 11.7544 5.61297 11.6666 5.83398 11.6666Z"
+                                        fill="currentColor" />
+                                </svg>
+                                &nbsp;About
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-container" data-carousel-id="2" data-category="skills">
+                    <div class="carousel">
+                        <div class="about-text-container">
+                            <h1>Skills</h1>
+                            <div>
+                                <h4>Web:</h4>
+                                <p>Web design, HTML, CSS, JS, Blazor, Minimal API, Entity Framework, Bootstrap, SignalR
+                                </p>
+                            </div>
+                            <div>
+                                <h4>.NET:</h4>
+                                <p>C#, .NET 4.8, .NET 8, WPF, XUnit, Fluent Assertion</p>
+                            </div>
+                            <div>
+                                <h4>iOS:</h4>
+                                <p>SwiftUI, UIkit, ReactiveKit, SPM, XCTest</p>
+                            </div>
+                            <div>
+                                <h4>Others:</h4>
+                                <p>English, MySQL, Python, MVVM, TDD, DI, SQP, Azure devops, Firebase, jira, UI/UX,
+                                    Figma</p>
+                            </div>
+                            <div class="slide-tag">
+                                <svg width="16" height="16" viewBox="0 0 12 12" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.292969 6.00004L2.76797 3.52504L3.47497 4.23204L1.70697 6.00004L3.47497 7.76804L2.76797 8.47504L0.292969 6.00004ZM4.39347 10.364L6.63647 1.39404L7.60647 1.63654L5.36397 10.6065L4.39347 10.364ZM8.52497 7.76804L10.293 6.00004L8.52497 4.23204L9.23247 3.52504L11.7075 6.00004L9.23247 8.47504L8.52497 7.76804Z"
+                                        fill="currentColor" />
+                                </svg>
+                                &nbsp;Skills
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-container" data-carousel-id="3" data-category="experience">
+                    <div class="carousel">
+                        <div class="about-text-container">
+                            <h1>.NET</h1>
+                            <div>
+                                <h4>Cadconsulting</h4>
+                                <p>Developed an internal application and an app for Sudop Group, including a robust
+                                    system for
+                                    validation, licensing, and distribution. Created subassemblies for Autodesk Civil 3D
+                                    software and established a product page, along with web-based help documentation for
+                                    all
+                                    applications.</p>
+                            </div>
+                            <div>
+                                <h4>Arkance Systems</h4>
+                                <p>I was responsible for the entire lifecycle of CivilTools and Potrubák apps, from
+                                    development
+                                    to customer support.</p>
+                            </div>
+                            <div class="slide-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4 21C3.45 21 2.97933 20.8043 2.588 20.413C2.19667 20.0217 2.00067 19.5507 2 19V8C2 7.45 2.196 6.97933 2.588 6.588C2.98 6.19667 3.45067 6.00067 4 6H8V4C8 3.45 8.196 2.97933 8.588 2.588C8.98 2.19667 9.45067 2.00067 10 2H14C14.55 2 15.021 2.196 15.413 2.588C15.805 2.98 16.0007 3.45067 16 4V6H20C20.55 6 21.021 6.196 21.413 6.588C21.805 6.98 22.0007 7.45067 22 8V19C22 19.55 21.8043 20.021 21.413 20.413C21.0217 20.805 20.5507 21.0007 20 21H4ZM4 19H20V8H4V19ZM10 6H14V4H10V6Z"
+                                        fill="currentColor" />
+                                </svg>
+                                &nbsp;Experience
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-container" data-carousel-id="4" data-category="experience">
+                    <div class="carousel">
+                        <div class="about-text-container">
+                            <h1>iOS</h1>
+                            <div>
+                                <h4>Qinshift</h4>
+                                <p>I worked as an iOS programmer, developing an internal app and MyŠkoda app that
+                                    allowed users
+                                    to control their cars.</p>
+                            </div>
+                            <h1>Web</h1>
+                            <div>
+                                <h4>Dibsido</h4>
+                                <p>At Dibsido, I worked on developing a web-based reservation system using Blazor,
+                                    allowing
+                                    users to efficiently book desks, parking lots, meeting rooms, and cars. We utilized
+                                    the
+                                    Syncfusion library for UI components and TypeScript for enhanced map
+                                    functionalities.</p>
+                            </div>
+                            <div class="slide-tag">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4 21C3.45 21 2.97933 20.8043 2.588 20.413C2.19667 20.0217 2.00067 19.5507 2 19V8C2 7.45 2.196 6.97933 2.588 6.588C2.98 6.19667 3.45067 6.00067 4 6H8V4C8 3.45 8.196 2.97933 8.588 2.588C8.98 2.19667 9.45067 2.00067 10 2H14C14.55 2 15.021 2.196 15.413 2.588C15.805 2.98 16.0007 3.45067 16 4V6H20C20.55 6 21.021 6.196 21.413 6.588C21.805 6.98 22.0007 7.45067 22 8V19C22 19.55 21.8043 20.021 21.413 20.413C21.0217 20.805 20.5507 21.0007 20 21H4ZM4 19H20V8H4V19ZM10 6H14V4H10V6Z"
+                                        fill="currentColor" />
+                                </svg>
+                                &nbsp;Experience
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-container" data-carousel-id="5" data-category="education">
+                    <div class="carousel">
+                        <div class="about-text-container">
+                            <h1>Education</h1>
+                            <div>
+                                <h4>VUT Brno</h4>
+                                <p>Faculty of Civil Engineering</p>
+                                <p>Master's and Bachelor's Degree</p>
+                            </div>
+                            <div class="slide-tag">
+                                <svg width="20" height="20" viewBox="0 0 24 24" stroke="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 9L12 5L2 9L12 13L22 9ZM22 9V15" fill="none" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M6 10.6V16C6 16.7956 6.63214 17.5587 7.75736 18.1213C8.88258 18.6839 10.4087 19 12 19C13.5913 19 15.1174 18.6839 16.2426 18.1213C17.3679 17.5587 18 16.7956 18 16V10.6"
+                                        fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                &nbsp;Education
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="profile-colors">
+            <p class="note">Copyright Ⓒ <span id="year"></span>. All Rights Reserved.</p>
+            <div>
+                <a href="mailto:info@msharp.cz">
+                    <svg width="30" height="30" viewBox="0 0 20 20" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.3327 5.00004C18.3327 4.08337 17.5827 3.33337 16.666 3.33337H3.33268C2.41602 3.33337 1.66602 4.08337 1.66602 5.00004V15C1.66602 15.9167 2.41602 16.6667 3.33268 16.6667H16.666C17.5827 16.6667 18.3327 15.9167 18.3327 15V5.00004ZM16.666 5.00004L9.99935 9.16671L3.33268 5.00004H16.666ZM16.666 15H3.33268V6.66671L9.99935 10.8334L16.666 6.66671V15Z"
+                            fill="currentColor" />
+                    </svg>
+                </a>
+                <a href="https://github.com/m-hcz" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 20 20" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.99935 1.66663C8.905 1.66663 7.82137 1.88217 6.81032 2.30096C5.79927 2.71975 4.88061 3.33358 4.10679 4.1074C2.54399 5.67021 1.66602 7.78982 1.66602 9.99996C1.66602 13.6833 4.05768 16.8083 7.36602 17.9166C7.78268 17.9833 7.91602 17.725 7.91602 17.5V16.0916C5.60768 16.5916 5.11602 14.975 5.11602 14.975C4.73268 14.0083 4.19102 13.75 4.19102 13.75C3.43268 13.2333 4.24935 13.25 4.24935 13.25C5.08268 13.3083 5.52435 14.1083 5.52435 14.1083C6.24935 15.375 7.47435 15 7.94935 14.8C8.02435 14.2583 8.24102 13.8916 8.47435 13.6833C6.62435 13.475 4.68268 12.7583 4.68268 9.58329C4.68268 8.65829 4.99935 7.91663 5.54102 7.32496C5.45768 7.11663 5.16602 6.24996 5.62435 5.12496C5.62435 5.12496 6.32435 4.89996 7.91602 5.97496C8.57435 5.79163 9.29102 5.69996 9.99935 5.69996C10.7077 5.69996 11.4243 5.79163 12.0827 5.97496C13.6743 4.89996 14.3743 5.12496 14.3743 5.12496C14.8327 6.24996 14.541 7.11663 14.4577 7.32496C14.9993 7.91663 15.316 8.65829 15.316 9.58329C15.316 12.7666 13.366 13.4666 11.5077 13.675C11.8077 13.9333 12.0827 14.4416 12.0827 15.2166V17.5C12.0827 17.725 12.216 17.9916 12.641 17.9166C15.9493 16.8 18.3327 13.6833 18.3327 9.99996C18.3327 8.90561 18.1171 7.82198 17.6983 6.81093C17.2796 5.79988 16.6657 4.88122 15.8919 4.1074C15.1181 3.33358 14.1994 2.71975 13.1884 2.30096C12.1773 1.88217 11.0937 1.66663 9.99935 1.66663Z"
+                            fill="currentColor" />
+                    </svg>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
