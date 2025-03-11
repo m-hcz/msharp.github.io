@@ -61,6 +61,12 @@
     cursor: pointer;
   }
 
+  .weblink {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
   .msharp-logo {
     position: fixed;
     z-index: 999;
