@@ -1,8 +1,8 @@
 * {
     --carousel-width: 700px;
     --carousel-height: 400px;
-    --carousel-gap: 30px;
-    --carousel-radius: 14px;
+    --carousel-gap: 6px;
+    --carousel-radius: 6px;
 }
 
 .projects {
@@ -52,7 +52,7 @@
     /* top: 50%; */
     /* transform: translateY(-50%); */
     background: transparent;
-    color: white;
+    color: var(--btn-next-color);
     border: none;
     top: 0;
     bottom: 0;
@@ -67,6 +67,7 @@
 .prev:hover,
 .next:hover {
     background: var(--hover-color);
+    color: white;
 }
 
 .prev {

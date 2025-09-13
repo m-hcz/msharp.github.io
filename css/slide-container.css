@@ -1,12 +1,16 @@
+* {
+    --text-carousel-gab: 30px;
+}
+
 .slide-text-container {
     color: inherit;
     background-color: inherit;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: var(--text-carousel-gab);
 
-    padding: 30px 60px;
+    padding: var(--text-carousel-gab) calc(var(--text-carousel-gab)*3);
     width: var(--carousel-width);
     height: var(--carousel-height);
     overflow: hidden;
@@ -20,9 +24,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: var(--text-carousel-gab);
 
-    padding: 30px;
+    padding: var(--text-carousel-gab);
     width: var(--carousel-width);
     height: var(--carousel-height);
     overflow: hidden;
@@ -35,9 +39,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: var(--text-carousel-gab);
 
-    padding: 30px;
+    padding: var(--text-carousel-gab);
     width: var(--carousel-width);
     min-height: var(--carousel-height);
     overflow: hidden;
@@ -47,7 +51,7 @@
     width: var(--carousel-width);
     display: flex;
     /* flex-direction: column; */
-    justify-content: center; 
+    justify-content: center;
 }
 
 .image-container img {
@@ -63,4 +67,10 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
+}
+
+@media (max-width: 800px) {
+    * {
+        --text-carousel-gab: 20px;
+    }
 }
