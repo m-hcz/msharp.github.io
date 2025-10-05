@@ -5,12 +5,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const carousels = document.querySelectorAll(".carousel-container");
 
     function filterCarousels(category) {
-        carousels.forEach(carousel => {
-            if (category === "all" || carousel.getAttribute("data-category") === category) {
-                carousel.style.display = "block";
-            } else {
-                carousel.style.display = "none";
-            }
+        carousels.forEach((carousel, index) => {
+            carousel.style.viewTransitionName = 'caousel-' + index;
+        });
+        
+        document.startViewTransition(() => {
+            carousels.forEach(carousel => {
+                if (category === "all" || carousel.getAttribute("data-category") === category) {
+                    carousel.style.display = "block";
+                } else {
+                    carousel.style.display = "none";
+                }
+            });
         });
     }
 

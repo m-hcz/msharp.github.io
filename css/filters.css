@@ -6,6 +6,7 @@
     padding: 0 20px;
    align-items: center;
    justify-content: center;
+   view-transition-name: transition-filters;
 }
 
 .filter {
@@ -44,3 +45,7 @@
         padding: 8px 10px;
     }
 }
+
+  ::view-transition-group(transition-filters) {
+    animation-duration: 0s !important;
+  }

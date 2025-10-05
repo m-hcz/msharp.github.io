@@ -14,6 +14,11 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
+    
+}
+
+#index-project-full {
+    view-transition-name: transition-index-project-full;
 }
 
 .profile-picture {
@@ -47,4 +52,8 @@
     color: var(--text-gray-color);
     display: flex;
     justify-content: center;
+}
+
+::view-transition-group(transition-index-project-full) {
+    animation-duration: 0s !important;
 }

@@ -73,6 +73,7 @@
     z-index: 999;
     top: 0px;
     left: -8px;
+    view-transition-name: transition-msharp-logo;
   }
 
   footer {
@@ -101,7 +102,7 @@
 
   @media (max-width: 719px) {
     * {
-        --default-gap: 20px;
+      --default-gap: 20px;
     }
 
     h1 {
@@ -119,10 +120,102 @@
     h3 {
       font-size: .9rem;
     }
-}
+  }
 
   @media (max-width: 519px) {
     p {
       font-size: .9rem;
     }
+  }
+
+  @view-transition {
+    navigation: auto;
+  }
+
+  #project-img1 {
+    view-transition-name: transition-project-img1;
+  }
+
+  #project-img2 {
+    view-transition-name: transition-project-img2;
+  }
+
+  #project-img3 {
+    view-transition-name: transition-project-img3;
+  }
+
+  #project-img4 {
+    view-transition-name: transition-project-img4;
+  }
+
+  #project-img5 {
+    view-transition-name: transition-project-img5;
+  }
+
+  #project-img6 {
+    view-transition-name: transition-project-img6;
+  }
+
+  #project-img7 {
+    view-transition-name: transition-project-img7;
+  }
+
+  #project-img8 {
+    view-transition-name: transition-project-img8;
+  }
+
+  #project-title1 {
+    view-transition-name: transition-project-title1;
+  }
+
+  #project-title2 {
+    view-transition-name: transition-project-title2;
+  }
+
+  #project-title3 {
+    view-transition-name: transition-project-title3;
+  }
+
+  #project-title4 {
+    view-transition-name: transition-project-title4;
+  }
+
+  #project-title5 {
+    view-transition-name: transition-project-title5;
+  }
+
+  #project-title6 {
+    view-transition-name: transition-project-title6;
+  }
+
+  #project-title7 {
+    view-transition-name: transition-project-title7;
+  }
+
+  #project-title8 {
+    view-transition-name: transition-project-title8;
+  }
+
+  ::view-transition-group(*) {
+    animation-duration: 0.5s;
+  }
+
+  ::view-transition-group(transition-msharp-logo),
+  ::view-transition-group(transition-project-img1),
+  ::view-transition-group(transition-project-img2),
+  ::view-transition-group(transition-project-img3),
+  ::view-transition-group(transition-project-img4),
+  ::view-transition-group(transition-project-img5),
+  ::view-transition-group(transition-project-img6),
+  ::view-transition-group(transition-project-img7),
+  ::view-transition-group(transition-project-img8),
+  ::view-transition-group(transition-project-title1),
+  ::view-transition-group(transition-project-title2),
+  ::view-transition-group(transition-project-title3),
+  ::view-transition-group(transition-project-title4),
+  ::view-transition-group(transition-project-title5),
+  ::view-transition-group(transition-project-title6),
+  ::view-transition-group(transition-project-title7),
+  ::view-transition-group(transition-project-title8) {
+    z-index: 999;
   }
