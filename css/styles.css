@@ -196,6 +196,31 @@
     view-transition-name: transition-project-title8;
   }
 
+    #project-bg1 {
+    view-transition-name: transition-project-bg1;
+  }
+    #project-bg2 {
+    view-transition-name: transition-project-bg2;
+  }
+    #project-bg3 {
+    view-transition-name: transition-project-bg3;
+  }
+    #project-bg4 {
+    view-transition-name: transition-project-bg4;
+  }
+    #project-bg5 {
+    view-transition-name: transition-project-bg5;
+  }
+    #project-bg6 {
+    view-transition-name: transition-project-bg6;
+  }
+    #project-bg7 {
+    view-transition-name: transition-project-bg7;
+  }
+    #project-bg8 {
+    view-transition-name: transition-project-bg8;
+  }
+
   ::view-transition-group(*) {
     animation-duration: 0.5s;
   }
