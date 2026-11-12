@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- inline, not in styles.css: Chrome drops the page transition when the opt-in arrives with a late stylesheet -->
+    <style>@view-transition { navigation: auto; }</style>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/profile.css">
@@ -26,12 +28,12 @@
 <body>
     <div class="page">
         <div class="main">
-            <a class="msharp-logo sg-colors" href="index.html" aria-label="MSharp home">
+            <a class="msharp-logo sg-colors" href="index.html#project-bg4" aria-label="MSharp home">
                 <svg width="90" height="70" aria-hidden="true"><use href="images/icons.svg#logo" /></svg>
             </a>
 
-            <div class="sg-colors project-full">
-                <div id="project-bg4" class="slide flex-column-center">
+            <div id="project-bg4" class="sg-colors project-full">
+                <div class="slide flex-column-center">
                     <h1 id="project-title4">SG Civil BIM Complete</h1>
                     <div class="slide-full-tag">
                         <svg width="16" height="16" aria-hidden="true"><use href="images/icons.svg#windows" /></svg>
@@ -46,18 +48,18 @@
                     <div class="carousel">
                         <div class="card-container">
                             <div>
-                                <h4>Web:</h4>
+                                <h2>Web:</h2>
                                 <a class="weblink" href="https://sg.ccsupport.cz/sgcivilbimcomplete"
                                     target="_blank">
                                     <svg width="16" height="16" aria-hidden="true"><use href="images/icons.svg#web" /></svg>
                                     &nbsp;sg.ccsupport.cz/sgcivilbimcomplete</a>
                             </div>
                             <div>
-                                <h4>Used technologies:</h4>
+                                <h2>Used technologies:</h2>
                                 <p>C#, .NET4.8, .NET8, WPF, WebView2</p>
                             </div>
                             <div>
-                                <h4>Description:</h4>
+                                <h2>Description:</h2>
                                 <p>Add-on for Autodesk Civil 3D. Helps users to create and validate BIM data.</p>
                             </div>
                         </div>
@@ -68,11 +70,11 @@
                     <div class="carousel">
                         <div class="card-container">
                             <div>
-                                <h4>BIM Complete:</h4>
+                                <h2>BIM Complete:</h2>
                                 <p>Fills the BIM properties of a project and its elements according to a data standard.</p>
                             </div>
                             <div>
-                                <h4>Property sets validation:</h4>
+                                <h2>Property sets validation:</h2>
                                 <p>Checks property sets and reports missing and empty values.</p>
                             </div>
                         </div>

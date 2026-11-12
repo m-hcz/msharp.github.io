@@ -67,6 +67,8 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
+    /* keeps the title off the edge of the coloured band on narrow screens */
+    padding: 10px;
 }
 
 @media (max-width: 800px) {

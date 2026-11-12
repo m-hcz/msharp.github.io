@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- inline, not in styles.css: Chrome drops the page transition when the opt-in arrives with a late stylesheet -->
+    <style>@view-transition { navigation: auto; }</style>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/profile.css">
@@ -26,12 +28,12 @@
 <body>
     <div class="page">
         <div class="main">
-            <a class="msharp-logo cc-colors" href="index.html" aria-label="MSharp home">
+            <a class="msharp-logo cc-colors" href="index.html#project-bg2" aria-label="MSharp home">
                 <svg width="90" height="70" aria-hidden="true"><use href="images/icons.svg#logo" /></svg>
             </a>
 
-            <div class="cc-colors project-full">
-                <div id="project-bg2" class="slide flex-column-center">
+            <div id="project-bg2" class="cc-colors project-full">
+                <div class="slide flex-column-center">
                     <h1 id="project-title2">CC Cad Tools</h1>
                     <div class="slide-full-tag">
                         <svg width="16" height="16" aria-hidden="true"><use href="images/icons.svg#windows" /></svg>
@@ -46,7 +48,7 @@
                     <div class="carousel">
                         <div class="card-container">
                             <div>
-                                <h4>Web:</h4>
+                                <h2>Web:</h2>
                                 <a class="weblink" href="https://cccadtools.cadconsulting.cz/"
                                     target="_blank">
                                     <svg width="16" height="16" aria-hidden="true"><use href="images/icons.svg#web" /></svg>
@@ -57,11 +59,11 @@
                                     &nbsp;Autodesk App Store</a>
                             </div>
                             <div>
-                                <h4>Used technologies:</h4>
+                                <h2>Used technologies:</h2>
                                 <p>C#, .NET4.8, .NET8, WPF</p>
                             </div>
                             <div>
-                                <h4>Description:</h4>
+                                <h2>Description:</h2>
                                 <p>Add-on for all Autodesk AutoCAD-based products. Implements features that are not
                                     available in the software.</p>
                             </div>
@@ -73,11 +75,11 @@
                     <div class="carousel">
                         <div class="card-container">
                             <div>
-                                <h4>File Manager:</h4>
+                                <h2>File Manager:</h2>
                                 <p>Pins drawings, folders and templates in one palette for quick opening.</p>
                             </div>
                             <div>
-                                <h4>Milling &amp; Stripping:</h4>
+                                <h2>Milling &amp; Stripping:</h2>
                                 <p>Creates a stripped surface from a selected surface and boundary layers.</p>
                             </div>
                         </div>

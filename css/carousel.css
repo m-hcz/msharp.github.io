@@ -35,11 +35,19 @@
     transition: transform 0.5s ease-in-out;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .carousel {
+        transition: none;
+    }
+}
+
 .slide {
     position: relative;
     min-width: var(--carousel-width);
     height: var(--carousel-height);
     display: flex;
+    /* as wide as the prev/next buttons, so a long title never runs under them */
+    padding: 0 60px;
 }
 
 .slide img {

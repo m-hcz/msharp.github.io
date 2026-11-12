@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- inline, not in styles.css: Chrome drops the page transition when the opt-in arrives with a late stylesheet -->
+    <style>@view-transition { navigation: auto; }</style>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/profile.css">
@@ -26,12 +28,12 @@
 <body>
     <div class="page">
         <div class="main">
-            <a class="msharp-logo cc-colors" href="index.html" aria-label="MSharp home">
+            <a class="msharp-logo cc-colors" href="index.html#project-bg3" aria-label="MSharp home">
                 <svg width="90" height="70" aria-hidden="true"><use href="images/icons.svg#logo" /></svg>
             </a>
 
-            <div class="cc-colors project-full">
-                <div id="project-bg3" class="slide flex-column-center">
+            <div id="project-bg3" class="cc-colors project-full">
+                <div class="slide flex-column-center">
                     <h1 id="project-title3">CC Cad Tools - Web</h1>
                     <div class="slide-full-tag">
                         <svg width="16" height="16" aria-hidden="true"><use href="images/icons.svg#web" /></svg>
@@ -46,18 +48,18 @@
                     <div class="carousel">
                         <div class="card-container">
                             <div>
-                                <h4>Web:</h4>
+                                <h2>Web:</h2>
                                 <a class="weblink" href="https://cccadtools.cadconsulting.cz/"
                                     target="_blank">
                                     <svg width="16" height="16" aria-hidden="true"><use href="images/icons.svg#web" /></svg>
                                     &nbsp;cccadtools.cadconsulting.cz</a>
                             </div>
                             <div>
-                                <h4>Used technologies:</h4>
+                                <h2>Used technologies:</h2>
                                 <p>Blazor Server, .NET6, Bootstrap, EF, MySQL, JS</p>
                             </div>
                             <div>
-                                <h4>Description:</h4>
+                                <h2>Description:</h2>
                                 <p>Product page for add-on CCcadTools.</p>
                             </div>
                         </div>
@@ -68,11 +70,11 @@
                     <div class="carousel">
                         <div class="card-container">
                             <div>
-                                <h4>Landing page:</h4>
+                                <h2>Landing page:</h2>
                                 <p>Buy, trial download and Autodesk App Store links, with supported platforms, versions and languages.</p>
                             </div>
                             <div>
-                                <h4>Functions page:</h4>
+                                <h2>Functions page:</h2>
                                 <p>Every command with a description and a video.</p>
                             </div>
                         </div>

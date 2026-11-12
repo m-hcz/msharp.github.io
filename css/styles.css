@@ -74,6 +74,16 @@
     font-size: 1.5em;
   }
 
+  /* cards use h2 for the title and the next level for field labels, so levels do not skip; sizes stay those of the old h1 and h4 */
+  .about-text-container h2 {
+    font-size: 2em;
+  }
+
+  .about-text-container h3,
+  .card-container h2 {
+    font-size: 1em;
+  }
+
   .weblink {
     display: flex;
     flex-wrap: nowrap;
@@ -118,13 +128,14 @@
       --default-gap: 20px;
     }
 
-    h1 {
+    h1,
+    .about-text-container h2 {
       font-size: 1.5rem;
     }
 
     h2,
     .project-full h1 {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
     }
   }
 
@@ -134,41 +145,7 @@
     }
   }
 
-  @view-transition {
-    navigation: auto;
-  }
-
-  #project-img1 {
-    view-transition-name: transition-project-img1;
-  }
-
-  #project-img2 {
-    view-transition-name: transition-project-img2;
-  }
-
-  #project-img3 {
-    view-transition-name: transition-project-img3;
-  }
-
-  #project-img4 {
-    view-transition-name: transition-project-img4;
-  }
-
-  #project-img5 {
-    view-transition-name: transition-project-img5;
-  }
-
-  #project-img6 {
-    view-transition-name: transition-project-img6;
-  }
-
-  #project-img7 {
-    view-transition-name: transition-project-img7;
-  }
-
-  #project-img8 {
-    view-transition-name: transition-project-img8;
-  }
+  /* the "@view-transition" opt-in is inline in each page's head, see the comment there */
 
   #project-title1 {
     view-transition-name: transition-project-title1;
@@ -231,15 +208,33 @@
     animation-duration: 0.5s;
   }
 
+  /* the home card and the project band differ in shape: keep both snapshots unscaled and centred instead of stretching them */
+  [id^="project-bg"] {
+    view-transition-class: project-bg;
+  }
+
+  ::view-transition-old(*.project-bg),
+  ::view-transition-new(*.project-bg) {
+    height: 100%;
+    object-fit: none;
+  }
+
+  /* scripts.js puts this on every card except the one being opened or left; it has to beat the id rules above */
+  .solo-off,
+  .solo-off [id^="project-title"] {
+    view-transition-name: none !important;
+  }
+
+  /* people who asked the system for less motion get the new state at once */
+  @media (prefers-reduced-motion: reduce) {
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+      animation: none !important;
+    }
+  }
+
   ::view-transition-group(transition-msharp-logo),
-  ::view-transition-group(transition-project-img1),
-  ::view-transition-group(transition-project-img2),
-  ::view-transition-group(transition-project-img3),
-  ::view-transition-group(transition-project-img4),
-  ::view-transition-group(transition-project-img5),
-  ::view-transition-group(transition-project-img6),
-  ::view-transition-group(transition-project-img7),
-  ::view-transition-group(transition-project-img8),
   ::view-transition-group(transition-project-title1),
   ::view-transition-group(transition-project-title2),
   ::view-transition-group(transition-project-title3),

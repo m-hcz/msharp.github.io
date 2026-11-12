@@ -13,7 +13,10 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
-    
+    /* keeps the text off the edge of the coloured band on narrow screens */
+    padding: 10px;
+    /* "all: unset" on links resets this, and the padding then makes the band 20px wider than the page */
+    box-sizing: border-box;
 }
 
 #index-project-full {

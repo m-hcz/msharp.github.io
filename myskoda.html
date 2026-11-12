@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- inline, not in styles.css: Chrome drops the page transition when the opt-in arrives with a late stylesheet -->
+    <style>@view-transition { navigation: auto; }</style>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/profile.css">
@@ -26,12 +28,12 @@
 <body>
     <div class="page">
         <div class="main">
-            <a class="msharp-logo myskoda-colors" href="index.html" aria-label="MSharp home">
+            <a class="msharp-logo myskoda-colors" href="index.html#project-bg7" aria-label="MSharp home">
                 <svg width="90" height="70" aria-hidden="true"><use href="images/icons.svg#logo" /></svg>
             </a>
 
-            <div class="myskoda-colors project-full">
-                <div id="project-bg7" class="slide flex-column-center">
+            <div id="project-bg7" class="myskoda-colors project-full">
+                <div class="slide flex-column-center">
                     <h1 id="project-title7">MyŠkoda Essentials</h1>
                     <div class="slide-full-tag">
                         <svg width="16" height="16" aria-hidden="true"><use href="images/icons.svg#ios" /></svg>
@@ -46,18 +48,18 @@
                     <div class="carousel">
                         <div class="card-container">
                             <div>
-                                <h4>App Store:</h4>
+                                <h2>App Store:</h2>
                                 <a class="weblink" href="https://apps.apple.com/cz/app/my%C5%A1koda-essentials/id1161648654"
                                     target="_blank">
                                     <svg width="16" height="16" aria-hidden="true"><use href="images/icons.svg#web" /></svg>
                                     &nbsp;App Store</a>
                             </div>
                             <div>
-                                <h4>Used technologies:</h4>
+                                <h2>Used technologies:</h2>
                                 <p>UIKit, SwiftUI, Swift Package Manager, Firebase, SwiftLint, XCTest, Azure DevOps</p>
                             </div>
                             <div>
-                                <h4>Description:</h4>
+                                <h2>Description:</h2>
                                 <p>App for remote controlling Škoda cars. Published by Škoda Auto; I worked on it as an iOS developer in the Qinshift team.</p>
                             </div>
                         </div>
@@ -68,11 +70,11 @@
                     <div class="carousel">
                         <div class="card-container">
                             <div>
-                                <h4>Vehicle status:</h4>
+                                <h2>Vehicle status:</h2>
                                 <p>Doors, lights and windows at a glance.</p>
                             </div>
                             <div>
-                                <h4>Your vehicles:</h4>
+                                <h2>Your vehicles:</h2>
                                 <p>List of the cars in the account.</p>
                             </div>
                         </div>

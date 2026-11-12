@@ -56,6 +56,9 @@ document
         index = 0;
       }
       carousel.style.transform = `translateX(${-index * 100}%)`;
+      // Off its first slide the title is clipped out of view. Unnamed, it stays in the card's snapshot instead of flying in from off-screen.
+      const title = slides[0]?.querySelector('[id^="project-title"]');
+      if (title) title.style.viewTransitionName = index ? "none" : "";
     }
 
     prevButton?.addEventListener("click", () => moveSlide(-1));
