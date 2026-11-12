@@ -1,11 +1,11 @@
-document.querySelector("#year").innerHTML = new Date().getFullYear();
+document.querySelector("#year").textContent = new Date().getFullYear();
 
 document.addEventListener("DOMContentLoaded", function () {
   const filters = document.querySelectorAll(".filter");
   const carousels = document.querySelectorAll(".carousel-container");
 
   function filterCarousels(category) {
-    document.startViewTransition(() => {
+    const apply = () => {
       carousels.forEach((carousel) => {
         if (
           category === "all" ||
@@ -16,22 +16,26 @@ document.addEventListener("DOMContentLoaded", function () {
           carousel.style.display = "none";
         }
       });
-    });
+    };
+    // Older Safari and Firefox have no view transitions: filter without the animation.
+    if (document.startViewTransition) {
+      document.startViewTransition(apply);
+    } else {
+      apply();
+    }
   }
 
   filters.forEach((filter) => {
     filter.addEventListener("click", function () {
-      // Remove active class from all filters
-      filters.forEach((f) => f.classList.remove("active"));
-      this.classList.add("active");
+      filters.forEach((f) => {
+        f.classList.toggle("active", f === this);
+        f.setAttribute("aria-pressed", f === this);
+      });
 
       const category = this.getAttribute("data-filter");
       filterCarousels(category);
     });
   });
-
-  // Show all carousels initially
-  filterCarousels("all");
 });
 
 document
@@ -40,7 +44,6 @@ document
     const carousel = carouselContainer.querySelector(".carousel");
     const prevButton = carouselContainer.querySelector(".prev");
     const nextButton = carouselContainer.querySelector(".next");
-    // const progressBar = carouselContainer.querySelector('.progress');
     const slides = carousel.querySelectorAll(".slide");
     let index = 0;
     let startX = 0;
@@ -53,22 +56,20 @@ document
         index = 0;
       }
       carousel.style.transform = `translateX(${-index * 100}%)`;
-      // updateProgress();
     }
-
-    // function updateProgress() {
-    //     let progressWidth = ((index + 1) / slides.length) * 100;
-    //     progressBar.style.width = `${progressWidth}%`;
-    // }
 
     prevButton?.addEventListener("click", () => moveSlide(-1));
     nextButton?.addEventListener("click", () => moveSlide(1));
 
-    carousel?.addEventListener("touchstart", (e) => {
+    // Cards without arrows (about and project pages) have nothing to swipe to.
+    if (!nextButton) return;
+
+    // Listen on the container: the link overlay sits on top of .carousel and takes the touches.
+    carouselContainer.addEventListener("touchstart", (e) => {
       startX = e.touches[0].clientX;
     });
 
-    carousel?.addEventListener("touchend", (e) => {
+    carouselContainer.addEventListener("touchend", (e) => {
       let endX = e.changedTouches[0].clientX;
       let diff = startX - endX;
       if (diff > 50) {
@@ -77,6 +78,4 @@ document
         moveSlide(-1);
       }
     });
-
-    // updateProgress(); // Initialize the progress bar
   });

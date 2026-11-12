@@ -4,7 +4,6 @@
     height: var(--carousel-height);
     border-radius: 20px;
     background-color: var(--profile-color);
-    /* box-shadow: 5px 5px 5px var(--shadow-color); */
 }
 
 .profile-full {
